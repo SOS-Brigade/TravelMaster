@@ -10,7 +10,7 @@ namespace MonoGame_Tools.Fundamental
     /// This is to be used as constants which won't ever change. EVER.
     /// You could place map stuff in here.
     /// </summary>
-    static class Constants
+    static public class Constants
     {
         public static int MainWindowHeight = 900;
         public static int MainWindowWidth = 1600;

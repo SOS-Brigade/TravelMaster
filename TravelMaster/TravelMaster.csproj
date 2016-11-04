@@ -56,7 +56,7 @@
     <MonoGameContentReference Include="Content\Content.mgcb" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="G:\Visual Studio 2015\Projects\TravelMaster\MonoGame-Tools\MonoGame-Tools.csproj">
+    <ProjectReference Include="..\MonoGame-Tools\MonoGame-Tools.csproj">
       <Project>{dd8c7469-b588-4614-b645-e50d28c37b12}</Project>
       <Name>MonoGame-Tools</Name>
     </ProjectReference>
