@@ -2,7 +2,7 @@
 using MonoGame_Tools.Fundamental;
 namespace MonoGame_Tools.Items
 {
-    static class ItemLogic
+    public static class ItemLogic
     {
         static public void useItem(Character character, Item i)
         {

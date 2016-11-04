@@ -28,7 +28,7 @@ namespace MonoGame_Tools.Conversation
             this.side = side;
         }
 
-        public TextBox(Texture2D Backdrop, SpriteFont DefaultFont, string CharacterName, string TextBody)
+        |public TextBox(Texture2D Backdrop, SpriteFont DefaultFont, string CharacterName, string TextBody)
         {
             this.defaultFont = DefaultFont;
             this.CharacterName = CharacterName;
@@ -75,20 +75,20 @@ namespace MonoGame_Tools.Conversation
             }
         }
 
-        /* public void Draw(SpriteBatch SP, Rectangle Location, Vector2 NameLocation, Vector2 TextLocation)
+        public void Draw(SpriteBatch SP, Rectangle Location, Vector2 NameLocation, Vector2 TextLocation)
          {
              if (side == 1)
              {
                  SP.Draw(Backdrop, Location, Color.Wheat);
-                 SP.DrawString(DefaultFont, Format(CharacterName), new Vector2(NameLocation.X, NameLocation.Y), Color.Black);
-                 SP.DrawString(DefaultFont, Format(TextBody), new Vector2(TextLocation.X, TextLocation.Y), Color.Black);
+                 SP.DrawString(defaultFont, Format(CharacterName), new Vector2(NameLocation.X, NameLocation.Y), Color.Black);
+                 SP.DrawString(defaultFont, Format(TextBody), new Vector2(TextLocation.X, TextLocation.Y), Color.Black);
              }
              else
              {
                  SP.Draw(Backdrop, Location, Color.Wheat);
-                 SP.DrawString(DefaultFont, Format(CharacterName), new Vector2(NameLocation.X, NameLocation.Y), Color.Black);
-                 SP.DrawString(DefaultFont, Format(TextBody), new Vector2(TextLocation.X, TextLocation.Y), Color.Black);
+                 SP.DrawString(defaultFont, Format(CharacterName), new Vector2(NameLocation.X, NameLocation.Y), Color.Black);
+                 SP.DrawString(defaultFont, Format(TextBody), new Vector2(TextLocation.X, TextLocation.Y), Color.Black);
              }
-         }*/
+         }
     }
 }
