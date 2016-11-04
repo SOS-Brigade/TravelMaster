@@ -25,8 +25,8 @@ namespace MonoGame_Tools.Conversation
 
         public void loadFromLibrary(int section, ContentManager Content, SpriteBatch SP)
         {
-            SpriteFont Segoe14 = Content.Load<SpriteFont>("Segoe14");
-            Texture2D DefaultTexture2D = Content.Load<Texture2D>("textBoxDefault");
+            SpriteFont Segoe14 = Content.Load<SpriteFont>("segoe");
+            Texture2D DefaultTexture2D = Content.Load<Texture2D>("TextBoxDefault");
 
             switch (section)
             {

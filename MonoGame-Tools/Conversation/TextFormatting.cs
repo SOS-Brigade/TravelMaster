@@ -17,6 +17,7 @@ namespace MonoGame_Tools.Conversation
             string[] words = text.Split(' ');
             StringBuilder sb = new StringBuilder();
             float lineWidth = 0f;
+            
             float spaceWidth = font.MeasureString(" ").X;
 
             foreach (string word in words)

@@ -171,5 +171,10 @@ namespace MonoGame_Tools.Fundamental
                 ActiveController = 0;
             }
         }
+
+        public void Draw(SpriteBatch spriteBatch, ConversationController conversationController, CharacterController characterController, object mapController, object landTextures)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
