@@ -5,6 +5,8 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TravelMaster", "TravelMaster\TravelMaster.csproj", "{7ED2C984-8023-4EEF-8A39-B142E1ABF741}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MonoGame-Tools", "G:\Visual Studio 2015\Projects\TravelMaster\MonoGame-Tools\MonoGame-Tools.csproj", "{DD8C7469-B588-4614-B645-E50D28C37B12}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x86 = Debug|x86
@@ -15,6 +17,10 @@ Global
 		{7ED2C984-8023-4EEF-8A39-B142E1ABF741}.Debug|x86.Build.0 = Debug|x86
 		{7ED2C984-8023-4EEF-8A39-B142E1ABF741}.Release|x86.ActiveCfg = Release|x86
 		{7ED2C984-8023-4EEF-8A39-B142E1ABF741}.Release|x86.Build.0 = Release|x86
+		{DD8C7469-B588-4614-B645-E50D28C37B12}.Debug|x86.ActiveCfg = Debug|x86
+		{DD8C7469-B588-4614-B645-E50D28C37B12}.Debug|x86.Build.0 = Debug|x86
+		{DD8C7469-B588-4614-B645-E50D28C37B12}.Release|x86.ActiveCfg = Release|x86
+		{DD8C7469-B588-4614-B645-E50D28C37B12}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
