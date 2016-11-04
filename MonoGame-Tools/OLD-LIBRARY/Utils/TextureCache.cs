@@ -25,6 +25,7 @@ namespace MonoGame_Tools.Utils
                     }
                     catch (ContentLoadException)
                     {
+                        m_textures.Add(index, null);
                         Logger.LogMessage(LogMessageType.Warning, "Cannot load content \"{0}\", setting to null", index);
                     }
                 }
@@ -39,15 +40,14 @@ namespace MonoGame_Tools.Utils
             m_content = content;
         }
 
-        public void Load(string p_contentName)
-        {
-            Texture2D newTexture = m_content.Load<Texture2D>(p_contentName);
-            m_textures.Add(p_contentName, newTexture);
-        }
-
         public void Unload(string index)
         {
-            m_content.Unload();
+            if (m_textures.ContainsKey(index))
+            {
+                Texture2D texture = m_textures[index];
+                texture.Dispose();
+                m_textures.Remove(index);
+            }
         }
     }
 }

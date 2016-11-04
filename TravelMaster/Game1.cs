@@ -1,9 +1,6 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
-using MonoGame_Tools.Utils;
-using MonoGame_Tools.MapTools;
-using MonoGame_Tools.Fundamental;
 
 namespace TravelMaster
 {
@@ -14,16 +11,11 @@ namespace TravelMaster
     {
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
-        TextureCache textureCache;
-        Map2D testMap;
 
         public Game1()
         {
             graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
-            textureCache = new TextureCache(Content);
-            graphics.PreferredBackBufferWidth = Constants.MainWindowWidth;
-            graphics.PreferredBackBufferHeight = Constants.MainWindowHeight;
         }
 
         /// <summary>
@@ -47,7 +39,7 @@ namespace TravelMaster
         {
             // Create a new SpriteBatch, which can be used to draw textures.
             spriteBatch = new SpriteBatch(GraphicsDevice);
-            textureCache.Load("test");
+
             // TODO: use this.Content to load your game content here
         }
 
@@ -71,8 +63,7 @@ namespace TravelMaster
                 Exit();
 
             // TODO: Add your update logic here
-            if (Keyboard.GetState().IsKeyDown(Keys.Space))
-                testMap = new Map2D(textureCache["test"], 600, 600, 10, 10);
+
             base.Update(gameTime);
         }
 
@@ -85,10 +76,6 @@ namespace TravelMaster
             GraphicsDevice.Clear(Color.CornflowerBlue);
 
             // TODO: Add your drawing code here
-            spriteBatch.Begin();
-            if (testMap != null)
-                testMap.Draw(spriteBatch);
-            spriteBatch.End();
 
             base.Draw(gameTime);
         }

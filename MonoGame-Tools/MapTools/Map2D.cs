@@ -13,46 +13,8 @@ namespace MonoGame_Tools.MapTools
     /// <summary>
     /// Map class for storing a map layout.
     /// </summary>
-    public class Map2D
+    class Map2D : IMap
     {
-        private Texture2D m_texture;
-        private int mapSize_width, mapSize_height;
-        private int m_spriteWidth, m_spriteHeight;
-
-        public Map2D(Texture2D p_texture, int p_mapSize_width, int p_mapSize_height, int sWidth, int sHeight)
-        {
-            m_texture = p_texture;
-            mapSize_width = p_mapSize_width;
-            mapSize_height = p_mapSize_height;
-            m_spriteWidth = sWidth;
-            m_spriteHeight = sHeight;
-        }
-
-        /// <summary>
-        /// Draw the entire map
-        /// </summary>
-        /// <param name="p_sb"></param>
-        public void Draw(SpriteBatch p_sb)
-        {
-            int n_x = mapSize_width / m_spriteWidth;
-            int n_y = mapSize_height / m_spriteHeight;
-
-            int spriteHeightCarryOver = 0;
-            for (int i = 0; i < n_y; ++i)
-            {
-                int spriteWidthCarryOver = 0;
-                for (int j = 0; j < n_x; ++j)
-                {
-                    p_sb.Draw(
-                        m_texture, new Rectangle(spriteWidthCarryOver, spriteHeightCarryOver, m_spriteWidth, m_spriteHeight), Color.White
-                        );
-                    spriteWidthCarryOver += m_spriteWidth;
-                }
-                spriteHeightCarryOver += m_spriteHeight;
-            }
-        }
-
-        /*
         private string m_name;
         private uint m_tileWidth, m_tile_height;
         private IDictionary<Vector3, Tile2D> m_tiles;
@@ -133,6 +95,16 @@ namespace MonoGame_Tools.MapTools
         }
 
         /// <summary>
+        /// Draw the entire map
+        /// </summary>
+        /// <param name="p_sb"></param>
+        public void Draw(SpriteBatch p_sb)
+        {
+            foreach (Tile2D tile in m_tiles.Values)
+                tile.Draw(p_sb);
+        }
+
+        /// <summary>
         /// Draw a chunk of the map.
         /// </summary>
         public void drawDomain(SpriteBatch p_sb, object p_domain)
@@ -140,6 +112,5 @@ namespace MonoGame_Tools.MapTools
             foreach (Tile2D tile in getDomain(p_domain))
                 tile.Draw(p_sb);
         }
-        */
     }
 }

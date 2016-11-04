@@ -64,6 +64,8 @@
     <Compile Include="OLD-LIBRARY\Dialogue\RectangleF.cs" />
     <Compile Include="OLD-LIBRARY\Dialogue\TextureChangeCollection.cs" />
     <Compile Include="OLD-LIBRARY\Dialogue\TextureChangeTag.cs" />
+    <Compile Include="MapTools\IMapWindow.cs" />
+    <Compile Include="MapTools\MapWindow2D.cs" />
     <Compile Include="MapTools\Tile2D.cs" />
     <Compile Include="Fundamental\GameObject.cs" />
     <Compile Include="MapTools\IMap.cs" />
